@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=contrast" />
+    <!-- css custom file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <button id="logoutButton" class="logout-btn" type="button">Log out</button>
+        <h1>QUIZ APP</h1>
+        <button id="theme-btn" class="icon-btn">
+            <span class="material-symbols-outlined">contrast</span>
+        </button>
+    </div>
+    <p id="logoutMessage" class="auth-message" role="status" aria-live="polite"></p>
+
+    <!-- QUIZ BOX -->
+    <div class="box" id="quiz-box">
+        <p id="question-count"></p>
+        <p id="question"></p>
+        <div id="options"></div>
+        <button id="next-btn">Next</button>
+    </div>
+
+    <!-- RESULT BOX (hidden until quiz finishes) -->
+    <div class="box" id="result-box" style="display: none;">
+        <h2>Quiz Finished!</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn">Try Again</button>
+    </div>
+    <!-- js custom file -->
+    <script src="app.js"></script>
+    <!-- firebase auth -->
+    <script type="module" src="./auth-guard.js"></script>
+</body>
+</html>
